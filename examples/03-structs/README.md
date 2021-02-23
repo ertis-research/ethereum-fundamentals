@@ -67,18 +67,18 @@ contract BasketGame {
   }
   
   // Functions that DON'T MODIFY contract storage. They don´t use gas
-  function getResult() public view returns(uint, uint) {
+  function getResult() external view returns(uint, uint) {
 -   return(homePoints, visitorPoints);
 +   return(game.homePoints, game.visitorPoints);
   }
   
-  function isGameFinished() public view returns(bool) {
+  function isGameFinished() external view returns(bool) {
 -   return(gameFinished);
 +   return(game.gameFinished);
   }
   
   // Transactions or functions that DO MOFIFY contract storage. They use gas
-  function scoreFreeThrow(Team team) public gameInProgress {
+  function scoreFreeThrow(Team team) external gameInProgress {
     if (team == Team.Home) {
 -     homePoints++;
 +     game.homePoints++;
@@ -88,7 +88,7 @@ contract BasketGame {
     }
   }
   
-  function scoreFieldGoal(Team team) public gameInProgress {
+  function scoreFieldGoal(Team team) external gameInProgress {
     if (team == Team.Home) {
 -     homePoints += 2;
 +     game.homePoints += 2;
@@ -98,7 +98,7 @@ contract BasketGame {
     }
   }
   
-  function scoreThreePointer(Team team) public gameInProgress {
+  function scoreThreePointer(Team team) external gameInProgress {
     if (team == Team.Home) {
 -     homePoints += 3;
 +     game.homePoints += 3;
@@ -108,7 +108,7 @@ contract BasketGame {
     }
   }
   
-  function finishGame() public gameInProgress {
+  function finishGame() external gameInProgress {
 -   gameFinished = true;
 -   emit FinalResult(homePoints, visitorPoints);
 +   game.gameFinished = true;
@@ -125,3 +125,6 @@ contract BasketGame {
 ```
 
 Of course, it is possible to directly access the members of the struct without assigning it to a local variable, as in `game.gameFinished = true`.
+
+### Useful links
+[Structs](https://docs.soliditylang.org/en/v0.8.1/types.html#structs)

@@ -21,16 +21,16 @@ contract BasketGame {
   }
   
   // Functions that DON'T MODIFY contract storage. They don´t use gas
-  function getResult() public view returns(uint, uint) {
+  function getResult() external view returns(uint, uint) {
     return(homePoints, visitorPoints);
   }
   
-  function isGameFinished() public view returns(bool) {
+  function isGameFinished() external view returns(bool) {
     return(gameFinished);
   }
   
   // Transactions or functions that DO MOFIFY contract storage. They use gas
-  function scoreFreeThrow(Team team) public {
+  function scoreFreeThrow(Team team) external {
     if (team == Team.Home) {
       homePoints++;
     } else {
@@ -38,7 +38,7 @@ contract BasketGame {
     }
   }
   
-  function scoreFieldGoal(Team team) public {
+  function scoreFieldGoal(Team team) external {
     if (team == Team.Home) {
       homePoints += 2;
     } else {
@@ -46,7 +46,7 @@ contract BasketGame {
     }
   }
   
-  function scoreThreePointer(Team team) public {
+  function scoreThreePointer(Team team) external {
     if (team == Team.Home) {
       homePoints += 3;
     } else {
@@ -54,7 +54,7 @@ contract BasketGame {
     }
   }
   
-  function finishGame() public {
+  function finishGame() external {
     gameFinished = true;
   }
 }
@@ -68,3 +68,9 @@ As this contract is the first one you ever seen, let's explain it completely:
 * `constructor` is executed only once, after contract deployment.
 * Functions that don't modify storage don´t consume gas. Keyword `view` is used to declare that this kind of functions do not modify state.
 * Functions that modify state/storage are called transactions and use gas.
+* Functions that are only called from other contracts and via transactions use keyword `external`. The main difference between `public` and `external` is gas usage. Solidity copies arguments to memory on a `public` function while `external` read from `calldata`, which is a cheaper allocation than in memory. So, if you know your function only allow external calls, use `external`. It provides better performance and make you save on gas.
+
+### Useful links
+[Structure of a contract](https://docs.soliditylang.org/en/v0.8.1/structure-of-a-contract.html)
+
+[Visibility and getters](https://docs.soliditylang.org/en/develop/contracts.html#visibility-and-getters)

@@ -17,16 +17,16 @@ contract BasketGame {
   }
   
   // Functions that DON'T MODIFY contract storage. They don´t use gas
-  function getResult() public view returns(uint, uint) {
+  function getResult() external view returns(uint, uint) {
     return(homePoints, visitorPoints);
   }
   
-  function isGameFinished() public view returns(bool) {
+  function isGameFinished() external view returns(bool) {
     return(gameFinished);
   }
   
   // Transactions or functions that DO MOFIFY contract storage. They use gas
-  function scoreFreeThrow(Team team) public gameInProgress {
+  function scoreFreeThrow(Team team) external gameInProgress {
     if (team == Team.Home) {
       homePoints++;
     } else {
@@ -34,7 +34,7 @@ contract BasketGame {
     }
   }
   
-  function scoreFieldGoal(Team team) public gameInProgress {
+  function scoreFieldGoal(Team team) external gameInProgress {
     if (team == Team.Home) {
       homePoints += 2;
     } else {
@@ -42,7 +42,7 @@ contract BasketGame {
     }
   }
   
-  function scoreThreePointer(Team team) public gameInProgress {
+  function scoreThreePointer(Team team) external gameInProgress {
     if (team == Team.Home) {
       homePoints += 3;
     } else {
@@ -50,7 +50,7 @@ contract BasketGame {
     }
   }
   
-  function finishGame() public gameInProgress {
+  function finishGame() external gameInProgress {
     gameFinished = true;
   }
 
