@@ -11,16 +11,28 @@ Solidity is an object-oriented, high-level language for implementing smart contr
 
 For newcomers it is highly recommended to start programming Solidity through [Remix](#some-links). Remix is an Ethereum  IDE that eases a lot smart contracts development, including editor, compiler or debugger (among other features) in one single site. In order to present Solidity main features, directory [examples](./examples) includes a series of smart contracts that use some of those characteristics.
 
+## Development environments
+
 ### Remix
 Remix IDE is an open source web and desktop application. It allows a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of contract development as well as being a playground for learning and teaching Ethereum.
 
-## Web3J
 Work in progress...
 
-## Infura
+### Ganache
 Work in progress...
 
-## Faucets
+## Web3
+Work in progress...
+
+## Deploying in testnets
+
+### Infura
+Work in progress...
+
+### Faucets
+Work in progress...
+
+## Deploying in the mainnet
 Work in progress...
 
 ### Some Links
