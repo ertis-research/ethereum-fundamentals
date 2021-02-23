@@ -38,6 +38,8 @@ Work in progress...
 ### Some Links
 [Solidity Documentation](https://docs.soliditylang.org/)
 
+[Solidity Tutorial](https://www.tutorialspoint.com/solidity/)
+
 [Vyper Documentation](https://vyper.readthedocs.io/)
 
 [Remix - Ethereum IDE](https://remix.ethereum.org/)
