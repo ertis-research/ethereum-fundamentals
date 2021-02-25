@@ -7,7 +7,7 @@ A smart contract is a collection of code and data that resides at a specific add
 To deploy a contract to a Ethereum blockchain network it is necessary (apart from writting the contract itself) to have enought ether (ETH) on your account to carry out this operation. Deploying a smart contract is also a transaction, like a simple ETH transfer, so you will need to pay an amount of gas for contract deployment. There are two main programming languages for writting smart contracts: Solidity (similar to JavaScript) and Vyper (similar to Python). In this guide we will focus on smart contract programming using Solidity.
 
 ### Solidity
-Solidity is an object-oriented, high-level language for implementing smart contracts. It has being designed to target the Ethereum Virtual Machine (EVM), is statically typed, supports inheritance, libraries and complex user-defined types (among other features). After writing a smart contract and before deploy it to a blockchain network, it is mandatory to compile that contract. There are multiple ways to install/use Solidity compiler: npm, Docker, Linux packages, macOs packages, binaries or building from source. I recommend using `npm / Node.js Solidity compiler` because it is the easiest alternative. To install it execute `npm install -g solc` on your favourite terminal. After installation verify using `solcjs --version`.
+Solidity is an object-oriented, high-level language for implementing smart contracts. It has being designed to target the Ethereum Virtual Machine (EVM), is statically typed, supports inheritance, libraries and complex user-defined types (among other features). After writing a smart contract and before deploy it to a blockchain network, it is mandatory to compile that contract. There are multiple ways to install/use Solidity compiler: npm, Docker, Linux packages, macOs packages, binaries or building from source. I recommend using __npm / Node.js Solidity compiler__ because it is the easiest alternative. To install it execute `npm install -g solc` on your favourite terminal. After installation verify using `solcjs --version`.
 
 In order to present Solidity main features, directory [examples](./examples) includes a series of smart contracts that use some of those characteristics.
 
@@ -24,9 +24,9 @@ The Ethereum Virtual Machine or EVM is the runtime environment for smart contrac
 ## Development environments
 
 ### Remix
-For newcomers it is highly recommended to start programming Solidity through [Remix](#some-links). Remix IDE is an open source web and desktop application. It allows a fast development cycle and has a rich set of plugins with intuitive GUIs. Remix is used for the entire journey of smart contract development as well as being a playground for learning and teaching Ethereum. It includes editor, compiler and debugger (among other features) in one single site/app. 
+For newcomers it is highly recommended to start programming Solidity using __Remix__. Remix IDE is an open source web and desktop application that allows a fast development cycle and has __a rich set of plugins__ with intuitive GUIs. Remix is used for the entire journey of smart contract development as well as being a playground for learning and teaching Ethereum. It includes editor, compiler and debugger (among other features) in one single site/app. 
 
-Work in progress...
+It is written in JavaScript and, as said previously, supports both usage in the browser and in the desktop. To try web application visit [https://remix.ethereum.org](https://remix.ethereum.org), and for desktop version, check latest releases on [ethereum/remix-desktop GitHub repository](https://github.com/ethereum/remix-desktop/releases). For further details, please consult [this tutorial](tutorials/remix.md) covering Remix IDE key points.
 
 ### Ganache
 Work in progress...
