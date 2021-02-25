@@ -50,10 +50,12 @@ This module allows you to send transactions to the current environment. To use i
 
 ![](resources/remix_06.png)
 
-When at least one contract is compiled, it is possible to select it (3 in image above) and deploy in the desired environment (1 in image above) with the chosen account (2 in image above). There are 3 possible environments, whose characteristics are going to be explained:
+When at least one contract is compiled, it is possible to select it (3 in image above) and deploy in the desired environment (1 in image above) with the chosen account (2 in image above). There are 3 kinds of environments, whose characteristics are going to be explained:
 * __JavaScript VM__. All the transaction will be executed in a sandbox blockchain within the browser and thus nothing will be persistend when you reload the page. It has 15 accounts, each of which has 100 ETH.
 * __Injected Provider__. Remix will connect to an injected web3 provider. The most famous provider that injects web3 is __Metamask__.
 * __Web3 Provider__. Remix will conneect to a remote node. You will need to provide the URL to the selected provider.
+
+There is also the possibility to work with a pre-deployed contract. For this it is necessary to input a contract address in the __At Address__ text field (4 in image above) while having contract source code in the editor.
 
 ## Debugger
 The Debugger shows the contract’s state while stepping through a transaction. It can be used on transactions created on Remix or by providing a transaction’s address. The latter assumes that you have the contract’s source code or that you have input the address of a verified contract.
