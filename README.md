@@ -28,21 +28,46 @@ For newcomers it is highly recommended to start programming Solidity using __Rem
 
 It is written in JavaScript and, as said previously, supports both usage in the browser and in the desktop. To try web application visit [https://remix.ethereum.org](https://remix.ethereum.org), and for desktop version, check latest releases on [ethereum/remix-desktop GitHub repository](https://github.com/ethereum/remix-desktop/releases). For further details, please consult [this tutorial](tutorials/remix.md) covering Remix IDE key points.
 
-### Ganache
+### Truffle Suite
+It is a blockchain development suite (probably the most popular one). Currently it it composed by 4 tools/projects:
+* __Truffle__. A development environment, testing framework and asset pipeline for blockchains using the Ethereum Virutal Machine.
+* __Ganache__. A personal blockchain for Ethereum development that can be used to deploy contracts and/or develop applications.
+* __Drizzle__. A collection of front-end libraries that make writing dapp front-ends easier. It includes libraries to simplify dapps development in plain JavaScript, React and Vue.
+* __Truffle Teams__. It is a DevOps tool for Dapps that allows testing efficiently with hosted continous integration or monitoring deployed contract balances, transactions and events.
+
+All these four libraries are great, but the most interesting one for us is __Ganache__, the one click blockchain. It is available as both a desktop application as well as a command-line tool. On the one hand, __Ganache UI__ (or just Ganache) is a desktop application supporting Ethereum technology. On the other hand, __ganache-cli__ is the command line version of Ganache, which can be dowloaded through _npm_ (`npm install -g ganache-cli`). All versions of Ganache are available for Windows, Mac and Linux. A [simple Ganache tutorial](tutorials/ganache.md) has been written as a starting point using this tool.
+
+### Visual Studio Code
+Also known as VS Code, Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js, having also a rich set of extensions for other languages such as Java, Python, C# or __Solidity__. In order to install VS Code, please check [Visual Studio Code dowloads site](https://code.visualstudio.com/download), where you can find the VS Code version that fits better on your computer.
+
+After installing it (or if you had it already installed), select 'Extensions' tab (1 in image below), search the desired extension writing _solidity_ on the text box (2 in image below) and install the extension developed by Juan Blanco (3 in image below). As at 2nd March 2021, it is also the Solidity extension with more downloads.
+
+![](resources/solidity_vsc_extension.png)
+
+## Deploying smart contracts
+There are multiple ways to deploy a smart contract in a blockchain network. In this section, we will learn __how to deploy a contract in a Ganache network__ using Remix IDE and using web3.js JavaScript library.
+
+### Using Remix IDE
 Work in progress...
 
-## Web3
+### Using web3.js
 Work in progress...
 
 ## Deploying in testnets
+Before starting this section, please read the previous one.
 
 ### Infura
+Work in progress...
+
+### Metamask
 Work in progress...
 
 ### Faucets
 Work in progress...
 
 ## Deploying in the mainnet
+Before starting this section, please read the previous one.
+
 Work in progress...
 
 ### Some Links
@@ -57,3 +82,9 @@ Work in progress...
 [The Ethereum Virtual Machine (EVM)](https://docs.soliditylang.org/en/v0.8.1/introduction-to-smart-contracts.html#the-ethereum-virtual-machine)
 
 [Remix - Ethereum IDE](https://remix.ethereum.org/)
+
+[Truffle - Smart contract development environment](https://github.com/trufflesuite/truffle)
+
+[Ganache - A one click blockchain](https://www.trufflesuite.com/docs/ganache/overview)
+
+[Visual Studio Code](https://code.visualstudio.com/)
