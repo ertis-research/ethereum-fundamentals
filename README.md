@@ -45,13 +45,19 @@ After installing it (or if you had it already installed), select 'Extensions' ta
 ![](resources/solidity_vsc_extension.png)
 
 ## Deploying smart contracts
-There are multiple ways to deploy a smart contract in a blockchain network. In this section, we will learn __how to deploy a contract in a Ganache network__ using Remix IDE and using web3.js JavaScript library.
+There are multiple ways to deploy a smart contract in a blockchain network. In this section, we will learn __how to deploy a contract in a Ganache network__ using Remix IDE and using web3.js JavaScript library. In both cases is mandatory having a Ganache network running.
 
 ### Using Remix IDE
-Work in progress...
+It is the easiest and fastest way to deploy a smart contract. First, Select __Deploy & Run Transactions__ Remix plugin. Then, choose __Web3 Provider__ environment (1 in image below) and a modal dialog will be prompted. It will require a Web3 Provider Endpoint, which is the __Ganache RPC Server URL__ (2). After entering endpoint, below environment select box, __network id__ is shown (3). Also, Ganache accounts are displayed (4).
+
+![](resources/Remix_Ganache.png)
+
+Now, you can deploy a smart contract in your Ganache blockchain network with any of your accounts.
 
 ### Using web3.js
-Work in progress...
+web3.js is a JavaScript library that allows you to interact with a local or remote Ethereum node through HTTP(s), IPC or WebSockets. It has multiple installation ways: Node/npm, Yarn, using the prebuilt JavaScript file or through a CDN. A quick tutorial indicating how to deploy a smart contract and how to interact with it using web3.js is [here](examples/06-web3js/README.md).
+
+__Note:__ It has been used web3.js as it could be used Web3 library for Java ([web3j](https://github.com/web3j/web3j)), Python ([web3.py](https://github.com/ethereum/web3.py)) or Ruby ([ethereum.rb](https://github.com/EthWorks/ethereum.rb)).
 
 ## Deploying in testnets
 Before starting this section, please read the previous one.
