@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>BasketGame Contract</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">BasketGame</a>
+    </nav>
+    <div class="container">
+      <div class="card offset-md-3 col-md-6 mycard">
+        <div class="card-header">
+          <h3>Create a new game</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label for="local">Local Team Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Unicaja"
+                name="local"
+              >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="visitor">Visitor Team Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Baskonia"
+                name="visitor"
+              >
+            </div>
+            <div class="form-group col-md-4">
+              <button type="button" class="btn btn-success mybutton">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card offset-md-2 col-md-8 mycard">
+        <div class="card-header">
+          <h3>Load and interact with a game</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="form-group col-md-2">
+              <label for="game_id">Game id</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="1234"
+                name="game_id"
+              >
+            </div>
+            <div class="form-group col-md-2">
+              <button type="button" class="btn btn-success mybutton3">Load</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label for="local">Local Team Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="---"
+                disabled
+                name="local"
+              >
+            </div>
+            <div class="form-group col-md-8">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info mybutton2">Free Throw</button>
+                <button type="button" class="btn btn-primary mybutton2">Field Goal</button>
+                <button type="button" class="btn btn-success mybutton2">3 Point Shot</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-md-4">
+              <label for="visitor">Visitor Team Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="---"
+                disabled
+                name="visitor"
+              >
+            </div>
+            <div class="form-group col-md-8">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info mybutton2">Free Throw</button>
+                <button type="button" class="btn btn-primary mybutton2">Field Goal</button>
+                <button type="button" class="btn btn-success mybutton2">3 Point Shot</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
