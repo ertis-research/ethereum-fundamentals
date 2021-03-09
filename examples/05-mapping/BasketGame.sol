@@ -26,8 +26,8 @@ contract BasketGame {
   }
   
   // Functions that DON'T MODIFY contract storage. They don´t use gas
-  function getResult(uint game_id) external view returns(uint, uint) {
-    return(games[game_id].homePoints, games[game_id].visitorPoints);
+  function getResult(uint game_id) external view returns(string memory, uint, string memory, uint) {
+    return(games[game_id].homeName, games[game_id].homePoints, games[game_id].visitorName, games[game_id].visitorPoints);
   }
   
   function isGameFinished(uint game_id) external view returns(bool) {
