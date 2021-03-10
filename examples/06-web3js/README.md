@@ -37,17 +37,17 @@ const Web3 = require('web3'); // Import web3 library
 
 const web3 = new Web3("http://localhost:7545"); // Create a Web3 instance
 const basketgameContract = new web3.eth.Contract($ABI_COPIED); // Create contract instance
-basketgameContract.deploy({ // Deploy contract
-  data: '0x12345...', // Use Remix IDE bytecode
-  arguments: []
-}).send({
-    from: web3.eth.accounts[0], 
+web3.eth.getAccounts().then(response => { // Retrieve accounts
+  const accounts = response;
+  basketgameContract.deploy({ // Deploy contract
+    data: '0x12345...', // Use Remix IDE bytecode
+    arguments: []
+  }).send({
+    from: accounts[0], 
     gas: '4700000'
-  }, function (e, contract){
-    console.log(e, contract);
-    if (typeof contract.address !== 'undefined') {
-      console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
-    }
+  }).then(response => {
+    console.log(`Contract mined! address: ${response._address}`);
+  });
 });
 ```
 
@@ -64,20 +64,22 @@ const Web3 = require('web3'); // Import web3 library
 
 const web3 = new Web3("http://localhost:7545"); // Create a Web3 instance
 const basketgameContract = new web3.eth.Contract($ABI_COPIED, $CONTRACT_ADDRESS); // Create contract instance
+web3.eth.getAccounts().then(response => { // Retrieve accounts
+  const accounts = response;
+  // Now you can try contract functions
 
-// Now you can try contract functions
-
-// 1. Create a new game
-basketgameContract.methods.createGame("UNICAJA", "BASKONIA")
-  .send({from: web3.eth.accounts[0]})
-  .then(function(response){
+  // 1. Create a new game
+  basketgameContract.methods.createGame("UNICAJA", "BASKONIA")
+  .send({from: accounts[0]})
+  .then(response => {
     console.log(response); // It will return game id
-  });
 
-// 2. Check game result ('from' is not mandatory but recommended when using 'call')
-basketgameContract.methods.getResult(1)
-  .call({from: web3.eth.accounts[0]})
-  .then(console.log);
+    // 2. Check game result ('from' is not mandatory but recommended when using 'call')
+    basketgameContract.methods.getResult(1)
+    .call({from: accounts[0]})
+    .then(console.log);
+  });
+});
 ```
 
 Edit `interact.js` as you like and the execute it:
