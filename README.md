@@ -62,19 +62,35 @@ __Note:__ It has been used web3.js as it could be used Web3 library for Java ([w
 ## Deploying in testnets
 Before starting this section, please read the previous one.
 
+Deploying a smart contract in a Ethereum testnet is quite similar that doing it in our local Ganache network. Nevertheless, it has two additional requirements: a way to interact with the desired network (__Infura__ or __Metamask__) and valid ether from that network (they can be obtained through a __faucet__)
+
 ### Infura
-Work in progress...
+It is a development suite that provides instant and scalable API access to the Ethereum networks. Using Infura requires an account in their system. You can [register on Infura for free](https://infura.io/register).
+
+Once your registration has been completed, you can create an Ethereum project on Infura. First, click on Ethereum tab and press button _CREATE NEW PROJECT_. After project creation, it will appear in your dashboard. Click on it and select tab _SETTINGS_, where you can find endpoints for Mainnet and some Testnets (Ropsten, Kovan, Rinkeby y Görli). Copy one of those endpoint URLs and use it to interact with the desired network.
+
+![](resources/infura.png)
 
 ### Metamask
-Work in progress...
+Metamask is an extension for accessing Ethereum network in several browsers as Chrome, Firefox, Brave or Edge. The extension injects the Ethereum web3 API into every website's javascript context, so that dapps can read from the blockchain. It can be dowloaded [here](https://metamask.io/download.html) and it looks like this:
+
+![](resources/metamask_01.png)
+
+It is also possible to connect your Metamask wallet with Remix IDE. Go to _DEPLOY & RUN TRANSACTIONS_ plugin and select a __Injected Web3__ environment. A Metamask window will be automatically prompted asking for permission. 
+
+![](resources/metamask_02.png)
 
 ### Faucets
-Work in progress...
+A Ethereum Faucet is an online platform that rewards users with small amounts of ether for completing microtasks or viewing online ads. However, testnets faucets do not require any of these, since that ether is worthless and only valid for testing purposes. For instance, [faucet.ropsten.be/](https://faucet.ropsten.be/) is a Ropsten faucet that send one ether to the account you enter, as shown down below:
+
+![](resources/ropsten_faucet.png)
 
 ## Deploying in the mainnet
 Before starting this section, please read the previous one.
 
-Work in progress...
+Finally, to deploy a smart contract in Ethereum mainnet you need real ether. When deploying a contract in this network, it must be tested several times beforehand. Executing transactions should be also limited, since each one consumes gas, with an associated expenditure of money.
+
+The steps to follow should be the same as for the deployment in testnets: write the smart contract, compile it with Remix/Solidiy compiler and deploy it using web3.js library+Infura or Remix+Metamask.
 
 ### Some Links
 [Solidity Documentation](https://docs.soliditylang.org/)
@@ -94,3 +110,9 @@ Work in progress...
 [Ganache - A one click blockchain](https://www.trufflesuite.com/docs/ganache/overview)
 
 [Visual Studio Code](https://code.visualstudio.com/)
+
+[web3.js - Ethereum JavaScript library](https://web3js.readthedocs.io/en/v1.3.4/)
+
+[Infura - Ethereum APIs](https://infura.io/)
+
+[Metamask - Crypto wallet & gateway to blockchain apps](https://metamask.io/)
