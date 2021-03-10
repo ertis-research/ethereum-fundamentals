@@ -7,3 +7,5 @@ As the latest version of [BasketGame.sol](../05-mapping/BasketGame.sol) was alre
 Again, it is necessary to make use of the web3 library. However, in this case the library will be include in a html file. In order to check out the developed Dapp, open in a browser file [index.html](index.html). It looks like this:
 
 ![](resources/dapp.png)
+
+The JavaScript file using web3.js library ([main.js](main.js)) needs to change variables `$ABI_COPIED` and `$CONTRACT_ADDRESS` to work properly. Please change both before running the Dapp.
