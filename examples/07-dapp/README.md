@@ -4,8 +4,6 @@ After learning how to write a smart contract using Solidity and how to deploy it
 
 As the latest version of [BasketGame.sol](../05-mapping/BasketGame.sol) was already deployed in the previous example, now we are going to create a user interface to interact with the smart contract.
 
-Again, it is necessary to intialise a new Node project and install web3 library
-```bash
-npm init -y
-npm i web3
-```
+Again, it is necessary to make use of the web3 library. However, in this case the library will be include in a html file. In order to check out the developed Dapp, open in a browser file [index.html](index.html). It looks like this:
+
+![](resources/dapp.png)
