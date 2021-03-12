@@ -5,7 +5,7 @@ const basketgameContract = new web3.eth.Contract($ABI_COPIED); // Create contrac
 web3.eth.getAccounts().then(response => { // Retrieve accounts
   const accounts = response;
   basketgameContract.deploy({ // Deploy contract
-    data: '0x12345...', // Use Remix IDE bytecode
+    data: '$REMIX_BYTECODE', // Use Remix IDE bytecode
     arguments: []
   }).send({
     from: accounts[0], 

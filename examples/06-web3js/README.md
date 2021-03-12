@@ -2,17 +2,6 @@
 
 In this example we are going to deploy a smart contract in a Ganache blockchain network and to interact with that contract. For this purpose, web3.js JavaScript library and the latest version of [BasketGame.sol](../05-mapping/BasketGame.sol) will be used.
 
-## Adding the library
-Initialise a new Node project
-```bash
-npm init -y
-```
-
-And install the library
-```bash
-npm i web3
-```
-
 ## Deploy a smart contract
 To deploy and interact with a smart contract __web3.js__ provides the object `web3.eth.Contract`. When creating a new contract object the __JSON interface__ of the respective smart contract is required. Also named __Contract ABI (Application Binary Interface)__, this interface is the standard way to interact with smart contracts in the Ethereum ecosystem, where data is encoded according to its type.
 
@@ -40,7 +29,7 @@ const basketgameContract = new web3.eth.Contract($ABI_COPIED); // Create contrac
 web3.eth.getAccounts().then(response => { // Retrieve accounts
   const accounts = response;
   basketgameContract.deploy({ // Deploy contract
-    data: '0x12345...', // Use Remix IDE bytecode
+    data: '$REMIX_BYTECODE', // Use Remix IDE bytecode
     arguments: []
   }).send({
     from: accounts[0], 
@@ -51,9 +40,11 @@ web3.eth.getAccounts().then(response => { // Retrieve accounts
 });
 ```
 
-Finally, you can execute the JavaScript file:
+Before executing the JavaScript file, replace variables `$ABI_COPIED` and `$REMIX_BYTECODE`. Then, install the Node dependency (`web3`) and, finally, execute the code.
+
 ```bash
-node deploy.js
+npm install
+npm run deploy
 ```
 
 ## Interact with a smart contract
@@ -63,7 +54,7 @@ In a similar way, interacting with a contract throught web3.js library requires 
 const Web3 = require('web3'); // Import web3 library
 
 const web3 = new Web3("http://localhost:7545"); // Create a Web3 instance
-const basketgameContract = new web3.eth.Contract($ABI_COPIED, $CONTRACT_ADDRESS); // Create contract instance
+const basketgameContract = new web3.eth.Contract($ABI_COPIED, '$CONTRACT_ADDRESS'); // Create contract instance
 web3.eth.getAccounts().then(response => { // Retrieve accounts
   const accounts = response;
   // Now you can try contract functions
@@ -72,7 +63,7 @@ web3.eth.getAccounts().then(response => { // Retrieve accounts
   basketgameContract.methods.createGame("UNICAJA", "BASKONIA")
   .send({from: accounts[0]})
   .then(response => {
-    console.log(response); // It will return game id
+    console.log(response);
 
     // 2. Check game result ('from' is not mandatory but recommended when using 'call')
     basketgameContract.methods.getResult(1)
@@ -82,9 +73,10 @@ web3.eth.getAccounts().then(response => { // Retrieve accounts
 });
 ```
 
-Edit `interact.js` as you like and the execute it:
+Before executing the JavaScript file, replace variables `$ABI_COPIED` and `$CONTRACT_ADDRESS`. Then,edit `interact.js` as you like and execute the next command:
+
 ```bash
-node interact.js
+npm run interact
 ```
 
 ### Useful links
