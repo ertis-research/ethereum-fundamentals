@@ -71,19 +71,27 @@ Once your registration has been completed, you can create an Ethereum project on
 
 ![](resources/infura.png)
 
+In order to verify Infura usage, [example 7](examples/07-infura/README.md) shows how to deploy a smart contract through Infura endpoint using web3.js library.
+
 ### Metamask
 Metamask is an extension for accessing Ethereum network in several browsers as Chrome, Firefox, Brave or Edge. The extension injects the Ethereum web3 API into every website's javascript context, so that dapps can read from the blockchain. It can be dowloaded [here](https://metamask.io/download.html) and it looks like this:
 
 ![](resources/metamask_01.png)
 
-It is also possible to connect your Metamask wallet with Remix IDE. Go to _DEPLOY & RUN TRANSACTIONS_ plugin and select a __Injected Web3__ environment. A Metamask window will be automatically prompted asking for permission. 
+Export an account created on Metamask is quite simple. First, click on 3 dots button (1 in image below) and select __Account details__ (Detalles de la cuenta). This will open another screen, where it is possible to export the private key of the account (2, in image below).
 
 ![](resources/metamask_02.png)
+
+It is also possible to connect your Metamask wallet with Remix IDE. Go to _DEPLOY & RUN TRANSACTIONS_ plugin and select a __Injected Web3__ environment. A Metamask window will be automatically prompted asking for permission. 
+
+![](resources/metamask_03.png)
 
 ### Faucets
 A Ethereum Faucet is an online platform that rewards users with small amounts of ether for completing microtasks or viewing online ads. However, testnets faucets do not require any of these, since that ether is worthless and only valid for testing purposes. For instance, [faucet.ropsten.be/](https://faucet.ropsten.be/) is a Ropsten faucet that send one ether to the account you enter, as shown down below:
 
 ![](resources/ropsten_faucet.png)
+
+Other faucets are [Metamask faucet](https://faucet.metamask.io/) or [Dimensions Network faucet](https://faucet.dimensions.network/). It is important to know that faucets usually blacklist accounts and or IP address during 24-48 hours to avoid users get unlimited ether on their accounts.
 
 ## Deploying in the mainnet
 Before starting this section, please read the previous one.
